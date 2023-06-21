@@ -4,9 +4,10 @@ services:
     build: ./frontend
     environment:
       - NODE_ENV=development
+      - PORT=8080
     volumes:
       - ./frontend:/usr/src/app
-    command: sh -c 'PORT=8080 yarn start'
+    command: sh -c 'yarn start'
     ports:
       - 8080:8080
     tty: true
